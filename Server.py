@@ -6,7 +6,7 @@ def aceitar_conexoes():
 	while 1:
 		client, addr = serverSocket.accept()
 		print(str(addr) + ' conectado')
-		client.send(bytes('Ola! Digite o seu nome: '))
+		#client.send(bytes('Ola! Digite o seu nome: '))
 		ends[client] = addr
 		Thread(target=cliente, args=(client,)).start()
 		
